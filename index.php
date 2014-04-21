@@ -26,10 +26,36 @@
   </head>
   
   <body role="document">
-      <h1 class="page-header">Bienvenue sur mon site ^^</h1>
+      
+      <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><i>Les hotels Du viole</i></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Accueil</a></li>
+            <li><a href=About.html>A propos du site</a></li>
+            <li><a href=Contact.html>Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+      
+      
+    <div class="container theme-showcase" role="main">
+        
+      <h1 >Bienvenue sur mon site ^^</h1>
         
       
-      
+    </div>  
       
       
       
