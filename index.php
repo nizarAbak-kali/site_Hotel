@@ -62,24 +62,24 @@
             <fieldset>
 
                 <!-- Form Name -->
-                <legend>Form Name</legend>
+                <legend>Rechercher une chambre </legend>
 
                 <!-- Text input-->
                 <div class="control-group">
-                    <label class="control-label" for="textinput">Text Input</label>
+                    <label class="control-label" for="textinput">Nom de l'hotel</label>
                     <div class="controls">
-                        <input id="textinput" name="textinput" placeholder="placeholder" class="input-xlarge" type="text">
-                        <p class="help-block">help</p>
+                        <input id="textinput" name="textinput" placeholder="nom de l'hotel" class="input-xlarge" type="text">
+                        
                     </div>
                 </div>
 
                 <!-- Select Basic -->
                 <div class="control-group">
-                    <label class="control-label" for="selectbasic">Select Basic</label>
+                    <label class="control-label" for="selectbasic">Chambres</label>
                     <div class="controls">
                         <select id="selectbasic" name="selectbasic" class="input-xlarge">
-                            <option>Option one</option>
-                            <option>Option two</option>
+                            <option> 1 chambre, 1 adulte</option>
+                            <option> 1 chambre, 2 adulte</option>
                         </select>
                     </div>
                 </div>
@@ -88,9 +88,8 @@
                 <div class="control-groArrivéejeudi
                      Départvendredi
                      up">
-                    <label class="control-label" for="singlebutton">Single Button</label>
                     <div class="controls">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+                        <button id="singlebutton" name="singlebutton" class="btn btn-lg btn-primary">Recherchez</button>
                     </div>
                 </div>
 
