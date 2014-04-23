@@ -58,14 +58,15 @@
         </div>  
 
         <!--form -->
-        <form class="form-horizontal">
+        <form class="form-verticale">
             <fieldset>
 
                 <!-- Form Name -->
                 <legend>Rechercher une chambre </legend>
 
                 <!-- Text input-->
-                <div class="control-group">
+                <div class="control
+                     group">
                     <label class="control-label" for="textinput">Nom de l'hotel</label>
                     <div class="controls">
                         <input id="textinput" name="textinput" placeholder="nom de l'hotel" class="input-xlarge" type="text">
