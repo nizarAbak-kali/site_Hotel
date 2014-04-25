@@ -86,11 +86,9 @@
                 </div>
 
                 <!-- Button -->
-                <div class="control-groArrivéejeudi
-                     Départvendredi
-                     up">
+                <div class="control-group">
                     <div class="controls">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-lg btn-primary">Recherchez</button>
+                        <a href=Rechercher_chambre.php>  <button id="singlebutton" name="singlebutton" class="btn btn-lg btn-primary">Recherchez</button></a>
                     </div>
                 </div>
 
