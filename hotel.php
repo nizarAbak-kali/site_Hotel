@@ -8,6 +8,7 @@
         <meta name="author" content="Nizar">
         <title> Hotels du viol </title>
 
+        <link rel="stylesheet" href="fond.css" />
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <!-- Optional theme -->
@@ -27,7 +28,7 @@
 
     <body role="document">
 
-        <!-- Fixed navbar -->
+        <!--Barre de navigation  -->
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -52,7 +53,7 @@
 
         <div class="container theme-showcase" role="main">
             <div class="jumbotron">
-                <h1 >Site de reservation de chambre</h1>
+                <h1 >Site de reservation de chambre d'hotel</h1>
                 <p> </p>
             </div>
         </div>  
@@ -63,38 +64,47 @@
 
                 <!-- Form Name -->
                 <legend>Rechercher une chambre </legend>
-
+                
+                 <!-- Text input-->
+                <div class="control
+                     group">
+                    <label class="control-label" for="textinput">Destination</label>
+                    <div class="controls">
+                        <input id="textinput" name="textinput" placeholder="destination,lieu,adresse..." class="input-xlarge" value="lieu" type="text">
+                        
+                    </div>
+                </div>
+                 
                 <!-- Text input-->
                 <div class="control
                      group">
                     <label class="control-label" for="textinput">Nom de l'hotel</label>
                     <div class="controls">
-                        <input id="textinput" name="textinput" placeholder="nom de l'hotel" class="input-xlarge" type="text">
+                        <input id="textinput" name="textinput" placeholder="nom de l'hotel" class="input-xlarge" value="nomhotel" type="text">
                         
                     </div>
                 </div>
 
-                <!-- Select Basic -->
                 <div class="control-group">
                     <label class="control-label" for="selectbasic">Chambres</label>
                     <div class="controls">
-                        <select id="selectbasic" name="selectbasic" class="input-xlarge">
-                            <option> 1 chambre, 1 adulte</option>
-                            <option> 1 chambre, 2 adulte</option>
+                        <select id="selectbasic" name="selectbasic"  class="input-xlarge">
+                            <option  value="choix_chamvre1"> 1 chambre, 1 adulte</option>
+                            <option value="choix_chamvre2"> 1 chambre, 2 adulte</option>
                         </select>
                     </div>
                 </div>
-
-                <!-- Button -->
+               
+                
+                <!--bouton qui va lancer la recherche -->
                 <div class="control-group">
                     <div class="controls">
-                        <a href=Rechercher_chambre.php>  <button id="singlebutton" name="singlebutton" class="btn btn-lg btn-primary">Recherchez</button></a>
+                        <a href=Rechercher_chambre.php>  <button id="singlebutton" style="text-align: right" name="singlebutton" value="rechercher" class="btn btn-lg btn-primary">Recherchez</button></a>
                     </div>
                 </div>
 
             </fieldset>
         </form>
-
 
 
 
