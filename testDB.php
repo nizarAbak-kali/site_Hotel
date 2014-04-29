@@ -9,10 +9,15 @@
         </form>
         
         <?php
-                $connexion = Connexion(NOM, PASSE, BASE, SERVEUR);
-                $requete  = "SELECT * FROM `chambre` WHERE 1";
-                $resultat = mysql_query($requete, $connexion) or die('Erreur SQL!'.$requete.'<br/>'.  mysql_error());
+            require_once './Connect.php';
+            require_once './Connexion.php';
         
+        
+            $connexion = Connexion(NOM, PASSE, BASE, SERVEUR);
+            $requete  = "SELECT * FROM `chambre` WHERE 1";
+            $resultat = mysql_query($requete, $connexion) or die('Erreur SQL!'.$requete.'<br/>'.  mysql_error());
+            
+            
             if (isset ($_POST['valider'])){
                echo '<h2>'.$_POST['nom'].'</h2>';  
                echo '<p> element dans la base de donnes : </p>';

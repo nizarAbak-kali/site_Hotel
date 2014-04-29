@@ -99,7 +99,7 @@
                 <!--bouton qui va lancer la recherche -->
                 <div class="control-group">
                     <div class="controls">
-                        <a href=Rechercher_chambre.php>  <button id="singlebutton" style="text-align: right" name="singlebutton" value="rechercher" class="btn btn-lg btn-primary">Recherchez</button></a>
+                        <a href=Rechercher_chambre.php>  <button id="singlebutton"  name="singlebutton" value="rechercher" class="btn btn-lg btn-primary">Recherchez</button></a>
                     </div>
                 </div>
 
