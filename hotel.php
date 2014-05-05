@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="petit site de resevervation de chambres">
         <meta name="author" content="Nizar">
-        <title> Hotels du viol </title>
+        <title>Les Hotels nuit-Blanche  </title>
 
         <link rel="stylesheet" href="fond.css" />
         <!-- Latest compiled and minified CSS -->
@@ -38,7 +38,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="hotel.php"><i>Les hotels Du viole</i></a>
+                    <a class="navbar-brand" href="hotel.php"><i>Les hotels Nuit-Blanche</i></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -54,7 +54,7 @@
 
         <div class="container theme-showcase" role="main">
             <div class="jumbotron">
-                <h1 >Site de reservation de chambre d'hotel</h1>
+                <h1 >Réservation de chambre d'hotel</h1>
                 <p> </p>
             </div>
         </div>  
@@ -100,7 +100,7 @@
                 <!--bouton qui va lancer la recherche -->
                 <div class="control-group">
                     <div class="controls">
-                        <a href="Rechercher_chambre.php"> <button id="singlebutton"  name="singlebutton" value="rechercher" class="btn btn-lg btn-primary">Recherchez </button> </a> 
+                        <a href="Rechercher_chambre.php"> <button id="singlebutton"  name="bouttonderecherche" value="rechercher" class="btn btn-lg btn-primary">Recherchez </button> </a> 
                     </div>
                 </div>
 
