@@ -46,6 +46,8 @@
                         <li><a href="Rechercher_chambre.php">Rechercher</a></li>
                         <li><a href=About.html>A propos du site</a></li>
                         <li><a href=Contact.html>Contact</a></li>
+                        <li><a href=Panier.php>Panier</a></li>
+                        <li><a href=login.php>Login</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -69,7 +71,7 @@
                  <!-- Text input-->
                 <div class="control
                      group">
-                    <label class="control-label" for="textinput">Destination</label>
+                    <label class="control-label" for="textinput" >Destination</label>
                     <div class="controls">
                         <input id="textinput" name="textinput" placeholder="destination,lieu,adresse..." class="input-xlarge" value="lieu" type="text">
                         

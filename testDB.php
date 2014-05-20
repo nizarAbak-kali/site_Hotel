@@ -24,49 +24,39 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <!--[endif]-->
     </head>
-    <body>
+    <body  >
         <h1>TEST !!!</h1>
         <p> </p>
         <form name="inscription" method="post" action="testDB.php">
-            Nom d'hotel: <input type="text" name="nom" > <br/>
+            Nom d'hotel: <input type="text" name="nomhotel" > <br/>
             Lieu  : <input type="text" name="nom" > <br/>
-             : <input type="text" name="nom" > <br/>
+            nombre de personne : <input type="text" name="nom" > <br/>
             <input type="submit" name="valider" value="OK"/>
         </form>
-        
-<!--          <div class="col-sm-4">
-            <div class="list-group">
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-          </div>
-        </div> /.col-sm-4 
-        -->
+
         <?php
             require_once './Connect.php';
             require_once './Connexion.php';
-        
-        
-            $connexion = Connexion(NOM, PASSE, BASE, SERVEUR);
-            $requete  = "SELECT * FROM `chambre` WHERE 1";
-            $resultat = mysql_query($requete, $connexion) or die('Erreur SQL!'.$requete.'<br/>'.  mysql_error());
-      
+            
+            $limit = 10 ;
+            
+           
             
             if (isset ($_POST['valider'])){
+                
+                 
+            $connexion = Connexion(NOM, PASSE, BASE, SERVEUR);
+            $requete  = 'SELECT * FROM "chambre" WHERE nom_hotel LIKE "%'.$_POST[nomhotel].'%"';
+            $resultat = mysql_query($requete, $connexion) or die('Erreur SQL!'.$requete.'<br/>'.  mysql_error());
+      
+                
+                
                echo '<h2>'.$_POST['nom'].'</h2>';  
                echo '<p> <h2> element dans la base de donnes : </h2></p>';
                echo '<div class="col-som-4">';
-               echo '<div class="list-group">';
+               echo '<div class="list-group" id = "elementdelalist">';
                while(($chambre = mysql_fetch_object($resultat))){
+                    
                     $chid = $chambre->chambre_id ;
                     $nh = $chambre->nom_hotel ;
                     $nbe = $chambre->nb_etoile;

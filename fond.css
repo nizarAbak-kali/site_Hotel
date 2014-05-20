@@ -9,3 +9,33 @@ body {
     background-image: url(image/plage.jpeg);
 }
 
+#elementdelalist{
+    margin: 30;
+    
+}
+
+#titrelogin{
+    margin: 100;
+    text-align: center;
+    
+    
+}
+#formlogin{
+    text-align: center;
+    
+    
+}
+
+.navbar-inverse{
+    
+    margin-bottom: 50;
+}
+
+.controls{
+    text-align: center;
+    
+}
+#forminscription{
+    margin-top: 100;
+    text-align: center;
+}
