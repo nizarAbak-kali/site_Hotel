@@ -34,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="hotel.php"><i>Les hotels Du viole</i></a>
+                    <a class="navbar-brand" href="hotel.php"><i>Les hotels Nuit-Blanche</i></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">

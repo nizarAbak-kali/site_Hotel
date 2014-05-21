@@ -50,8 +50,8 @@
         </div>
         
         <div id="forminscription">
-            <p> <h1> Inscription (un peu simple): </h1> </p>
-            <form>
+             <h1> Inscription (un peu simple): </h1> <br/>   
+             <form name="formulaire" method="post" action="inscription.php">
                 <p>
                     <strong> Nom :          </strong> <input type="text" name="nominscrip" > <br/>
                 </p>
@@ -60,8 +60,13 @@
                 </p>
                 
                 <p>
-                    <strong> Pseudo :      </strong> <input type="text" name="pseudoinsciption" > <br/>
+                    <strong> Pseudo :      </strong> <input type="text" name="pseudoinscrip" > <br/>
                 </p>
+                
+                <p>
+                    <strong> Mail :      </strong> <input type="text" name="mailinscrip" > <br/>
+                </p>
+                
                 <p>
                     <strong> Mot de passe : </strong> <input type="password" name="psswdinscrip" > <br/>
                 </p>
@@ -69,20 +74,55 @@
                 <p>
                     <strong> mot de passe (confirmation) : </strong> <input type="password" name="psswdinscripconfirm" > <br/>
                 </p>
-                
+                <p>
+                    <input type="submit"  name="inscrire" value="ok" > <br/>
+                </p>
+
             </form>
-            
-           </div>
-        
+
+        </div>
 
 
-<?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
-    
+        <?php
+        $nom = $_POST['nominscrip'];
+        $prenom = $_POST['prenominscrip'];
+        $pseudo = $_POST['pseudoinscrip'];
+        $mail = $_POST['mailinscrip'];
+        $passwd = $_POST['psswdinscrip'];
+        $confirm = $_POST['psswdinscripconfirm'];
+        $etat_panier = 0 ;
+        if (isset($_POST['inscrire'])) {
+            if (!$nom or ! $prenom or ! $pseudo or ! $mail or ! $passwd or ! $confirm) {
+                echo '<p><strong> Un champ n' . "'" . 'est pas rempli !</p></strong> ' . "\n" . '';
+                exit();
+            } 
+            else {
+                if ($passwd != $confirm){
+                    echo '<p><strong> Mot de passe pas identique</p></strong> ' . "\n" . '';
+                    exit();
+                    
+                }
+                if (!filter_var($mail, FILTER_VALIDATE_EMAIL)){
+                    echo '<p><strong> email pas valide</p></strong> ' . "\n" . '';
+                    exit();
+                    }
+                require_once './Connect.php';
+                require_once './Connexion.php';
+                
+                
+                
+                
+               // $sql = 'INSERT INTO ClientTable VALUES("","' . $pseudo . '","' . $sexe . '","' . $age . '","' . $today . '")';
+                
+               //(`client_id`, `nom`, `prenom`, `etat_panier`, `motdepasse`, `pseudo`, `mail`)
+                $sql2 = 'INSERT INTO ClientTable  VALUES ("","'.$nom.'","'. $prenom.'","'. $etat_panier.'","' . $passwd . '","' . $pseudo . '","' . $mail . '")';
+                
+                $connexion = Connexion(NOM, PASSE,BASE,SERVEUR);
+                mysql_query ($sql2) or die ('Erreur SQL !'.$sql.'<br />'.mysql_error()); 
+                mysql_close();
+            }
+        }
+        ?> 
+
  </body>

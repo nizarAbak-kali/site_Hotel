@@ -71,8 +71,13 @@
         
         require_once './Connect.php';
         require_once './Connexion.php';
-    
-        if(isset($_POST['valider']))
+        $connexion = Connexion(NOM, PASSE, BASE, SERVEUR);
+        $requete  = "SELECT * FROM `chambre` WHERE 1";
+        if(isset($_POST['valider_login'])){
+            
+            
+        }
+            
             
     
     
